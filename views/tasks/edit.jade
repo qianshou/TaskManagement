@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    form(method='post',action='/tasks/#{task._id}?_method=PUT')
+        fieldset
+            legend
+                a(href='/tasks') 任务列表
+                | /修改任务
+        div.clearfix
+            label 修改一下你的任务吧
+            div.input
+                input(name='task',class='form-control',style='width:400px;' value="#{task.task}")
+                input(type='hidden',name='_method',value='PUT')
+        div.actions(style='margin-top:20px;')
+            input(type='submit',value='确　定',class='btn btn-primary')
+            span &nbsp;&nbsp;
+            button(type='reset',class='btn') 重　置

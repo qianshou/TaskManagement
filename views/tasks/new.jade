@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    form(method='post',action='/tasks')
+        fieldset
+            legend
+                a(href='/tasks') 任务列表
+                | /添加任务
+        div.clearfix
+            label 填写一个任务吧
+            div.input
+                input(name='task',class='form-control',style='width:400px;')
+        div.actions(style='margin-top:20px;')
+            input(type='submit',value='确　定',class='btn btn-primary')
+            span &nbsp;&nbsp;
+            button(type='reset',class='btn') 重　置
