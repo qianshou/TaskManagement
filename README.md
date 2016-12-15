@@ -15,6 +15,11 @@
 | /tasks      | DELETE | 删除任务     |
 
 
+# 启动项目
+
+```
+SET DEBUG=blog:* & npm start
+```
 
 # 具体说明
 
